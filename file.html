@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <style>
+        .xAxisezajmkylye .tick text {
+            text-anchor: middle!important;
+            transform: rotate(0)!important;
+        }
+        
+        #ezajmkylye {
+            height: 380px!important;
+        }
+        
+        #ezajmkylye svg {
+            height: 380px!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ezajmkylye"></div>
+	
+	
+    <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+    <script>
+        require.config({
+            paths: {
+                roughViz: "https://unpkg.com/rough-viz@1.0.2/dist/roughviz.min"
+            }
+        });
+        require(["roughViz"], function(roughViz) {
+            new roughViz.Bar({
+                element: "#".concat("ezajmkylye"),
+                data: {
+                    labels: [1, 2, 3, 4, 5],
+                    values: [3.0, 4.0, 10.0, 2.0, 0.9]
+                },
+                axisFontSize: "1.5rem",
+                axisRoughness: 0.5,
+                axisStrokeWidth: 0.5,
+                bowing: 0,
+                color: "skyblue",
+                fillStyle: "cross-hatch",
+                fillWeight: 0,
+                font: 0,
+                highlight: "green",
+                innerStrokeWidth: 0,
+                labelFontSize: "2rem",
+                padding: 0.1,
+                roughness: 1,
+                simplification: 0.2,
+                stroke: "black",
+                strokeWidth: 1,
+                title: "",
+                titleFontSize: "3rem",
+                tooltipFontSize: "3rem",
+                xLabel: "",
+                yLabel: "",
+                height: 400,
+                width: 700
+            });
+        });
+    </script>
+</body>
+
+</html>
